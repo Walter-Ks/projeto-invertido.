@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de invertido</title>
+    <!--<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&family=EB+Garamond:wght@700&display=swap" rel="stylesheet">-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="btEntrar">
+        <button onclick="btEntrar()" id="entrar" type="submit">ENTRAR</button>
+    </div>
+
+
+
+    <div id="container">   
+        
+        <div class="modal">
+        <div class="modal_content">
+            <img src="img/1.jpeg" alt="" id="modal_img">
+        </div>    
+        <span id="btclose">&times;</span>
+    </div>
+
+
+        <div id="imgs4"></div>
+        <h1 id="title">Regulagem de invertido</h1>
+        <br>
+        <h2 id="txt1">1. Digite aqui o tamanho do dente da ranhura:</h2>
+        <input class="falha" class="inp" type="number" id="inp1">
+        <input id="bt" class="bt1 bt" onclick="prox()" type="checkbox" >
+                <label class="button l1" for="bt">proximo</label>
+        <br><br>
+        <div class="infoBox">
+            <h2 id="txt2">2. Digite aqui o tamanho de dois dentes de ranhuras,sendo<br>uma delas com a chapa invertidas:
+            </h2>
+            <input class="falha" class="inp" type="number" id="inp2">
+            <input id="bt2" class="bt2 bt" onclick="enter2()" type="checkbox" >
+                <label class="button l2" for="bt2">proximo</label>
+        </div>
+        <br><br>
+        <div class="infoBox">
+            <h2 id="txt3">3. Agora digite o tamanho <span>INTERNO</span> da chapa:</h2>
+            <input class="falha" class="inp" type="number" id="inp3">
+            <input id="bt3" class="bt3 bt" onclick="enter3()" type="checkbox" >
+            <label class="button l3" for="bt3">proximo</label>
+        </div>
+        <br><br>
+        <div class="infoBox">
+            <h2 id="selecao">4. No invertido, com qual das imagens se parece estar igual sua situação:</h2>
+            <form>
+                <input onclick="op1()" class="chapa imagem" name="sel" id="Egirar+" type="radio">
+                <label for="Egirar+"><img class="imgZoom" src="img/1.jpeg" tabindex="0"></label>
+
+                <input onclick="op2()" class="chapa imagem" name="sel" id="Egirar-" type="radio">
+                <label for="Egirar-"><img class="imgZoom" src="img/2.jpeg" tabindex="0"></label>
+
+                <input onclick="op3()" class="chapa imagem" name="sel" id="Rgirar+" type="radio">
+                <label for="Rgirar+"><img class="imgZoom" src="img/3.jpeg" tabindex="0"></label>
+
+                <input onclick="op4()" class="chapa imagem" name="sel" id="Rgirar-" type="radio">
+                <label for="Rgirar-"><img class="imgZoom" src="img/4.jpeg" tabindex="0"></label>
+
+            </form>
+            <input id="bt4" class="bt4 bt" onclick="enter4()" type="checkbox" >
+            <label class="button top l4" for="bt4">proximo</label>
+        </div>
+        <br><br>
+        <div class="infoBox">
+            <button id="calcular">Calcular</button>
+            <div id="esconder">
+                <div id="resultado"></div>
+                <div id="check"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
